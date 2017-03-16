@@ -27,4 +27,4 @@ class Select extends Component{
 }
 
 
-export default Output;
+export default Select;
