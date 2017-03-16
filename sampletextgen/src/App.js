@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import './Component/Output'
+import Output from './Component/Output'
+import Select from './Component/Controls/Select'
 import axios from 'axios';
 
 class App extends Component {
@@ -31,7 +32,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
+        <h1>ReactJS Sample Text Generator<h1>
+        <hr />
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Include HTML:</label>
+                <Select value={this.state.html} onchange={this.showHtml.bind(this)}/>
+            </div>
+        </form>
         <Output value={this.state.text}/>
       </div>
     );
